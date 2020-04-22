@@ -11,18 +11,16 @@ export class BikeService {
   constructor(private http:HttpClient) { }
    
    getBikes(){
-      let token = localStorage.getItem('access_token');
-      console.log(token);
-      //alert("token:"+token); 
-      return this.http.get('/server/api/v1/bikes',
-        {headers:new HttpHeaders().set('Authorization', 'Bearer' + token)}
+      //let token = localStorage.getItem('access_token');
+      return this.http.get('/server/api/v1/bikes'
+        //,{headers:new HttpHeaders().set('Authorization', 'Bearer' + token)}
        );
    }
    
    getBike(id:number){
-      let token = localStorage.getItem('access_token');
-      return this.http.get('/server/api/v1/bikes/' + id,
-        {headers:new HttpHeaders().set('Authorization', 'Bearer' + token)}
+      //let token = localStorage.getItem('access_token');
+      return this.http.get('/server/api/v1/bikes/' + id
+        //,{headers:new HttpHeaders().set('Authorization', 'Bearer' + token)}
        );
    }
 
